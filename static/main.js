@@ -80,11 +80,23 @@ function displayFlashcards() {
         var editButton = createEditButton(index);
         cardDiv.appendChild(editButton);
         
-        var answerText = document.createTextNode(answersHidden ? "*".repeat(flashcard.a.length) : flashcard.a);
+        var answerText = document.createElement("span");
+        if (answersHidden) {
+            answerText.className = "blurred-text";
+        }
+        answerText.classList.add("blurable-text");
+        answerText.textContent = flashcard.a;
+        answerText.addEventListener("click", function() {
+            toggleBlur(answerText);
+        });
         cardDiv.appendChild(answerText);
         
         container.appendChild(cardDiv);
     });
+}
+
+function toggleBlur(element) {
+    element.classList.toggle("blurred-text");
 }
 
 function saveFlashcards() {
@@ -103,7 +115,16 @@ function toggleHiddenAnswers() {
     answersHidden = !answersHidden;
     var toggleButton = document.getElementById("toggleButton");
     toggleButton.innerHTML = answersHidden ? "<i class=\"fa-solid fa-eye\"></i> Show Answers" : "<i class=\"fa-solid fa-eye-slash\"></i> Hide Answers";
-    displayFlashcards();
+
+    var answerElements = document.querySelectorAll(".blurable-text");
+
+    answerElements.forEach(function(element) {
+        if (answersHidden) {
+            element.classList.add("blurred-text");
+        } else {
+            element.classList.remove("blurred-text");
+        }
+    });
 }
 
 function deleteAllFlashcards() {
@@ -161,7 +182,8 @@ function presentNewFlashcard() {
     }
 
     if (flashcards.length === 1) {
-        var randomFlashcard = flashcards[0];
+        alert("There is only one flashcard available.");
+        return;
     } else {
         while (randomIndex === oldRandomIndex) {
             randomIndex = Math.floor(Math.random() * flashcards.length);
@@ -171,23 +193,24 @@ function presentNewFlashcard() {
     var randomFlashcard = flashcards[randomIndex];
 
     document.querySelector('.flashcard-editor').style.display = 'none';
+    document.querySelector('.flashcard-presentation').style.display = 'block';
     document.getElementById('question').textContent = randomFlashcard.q;
     document.getElementById('answer').textContent = randomFlashcard.a;
-    document.querySelector('.flashcard-presentation').style.display = 'block';
-    document.getElementById('answer').style.display = 'none';
+    document.getElementById('answer').classList.add('blurred-text');
 }
 
 function revealAnswer() {
-    document.getElementById('answer').style.display = 'block';
+    document.getElementById('answer').classList.remove('blurred-text');
 }
 
 function toggleFlashcardEditor() {
     document.querySelector('.flashcard-editor').style.display = 'block';
     document.querySelector('.flashcard-presentation').style.display = 'none';
-    document.getElementById('answer').style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    loadFlashcards();
+
     document.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             if (document.querySelector('.flashcard-presentation').style.display === 'none') {
@@ -220,5 +243,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-    
-loadFlashcards();

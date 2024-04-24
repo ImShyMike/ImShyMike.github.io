@@ -235,3 +235,8 @@ h1 {
 .next-button:hover {
     background-color: #0056b3;
 }
+
+.blurred-text {
+    filter: blur(5px);
+    cursor: pointer;
+}
