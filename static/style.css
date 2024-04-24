@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    position: relative;
+    padding-top: 75px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#flashcardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.flashcard {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+    position: relative;
+}
+
+.flashcard strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -4000px;
+    width: calc(100% + 8000px);
+    height: calc(100% + 40px);
+    background-color: #f4f4f4;
+    z-index: -1;
+}  
+
+.input-container input[type="text"] {
+    flex: 1;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-container button {
+    flex: 0 0 auto;
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #0062CC;
+    cursor: pointer;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+}
+
+.delete-button:hover {
+    background: rgba(200, 200, 200, 50);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.top-right-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.top-right-buttons button:hover {
+    background-color: #0062cc;
+}
+
+.top-left-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.top-left-button:hover {
+    color: #0062cc;
+}
+
+.edit-button {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+}
+
+.edit-button:hover {
+    background: rgba(200, 200, 200, 50);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: 1000;
+}
+
+.flashcard-editor {
+    display: fixed;
+}
+
+.presented-flashcard {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 15%;
+    text-align: center;
+}
+
+.presented-flashcard p {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 24px;
+    word-wrap: break-word;
+    max-width: 90%;
+    margin: 4% auto;
+}
+
+.presented-flashcard b {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    word-wrap: break-word;
+    max-width: 90%;
+    margin: auto;
+}
+
+.reveal-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 25px;
+    left: 100px;
+    transform: translateX(-50%);
+}
+
+.reveal-button:hover {
+    background-color: #0056b3;
+}
+
+.next-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 25px;
+    right: -10px;
+    transform: translateX(-50%);
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+}
