@@ -1,44 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="static/style.css">
-    <script src="static/main.js"></script>
-    <title>Flashcards</title>
+    <title>Wynntils Functions Cheat Sheet</title>
 </head>
 <body>
-    <div class="flashcard-editor">
-        <div class="header">
-            <h1>Flashcards</h1>
-            <div class="top-right-buttons">
-                <button onclick="exportFlashcards()"><i class="fa-solid fa-file-export"></i> Export</button>
-                <button onclick="importFlashcards()"><i class="fa-solid fa-file-import"></i> Import</button>
-            </div>
-            <button class="top-left-button" onclick="presentNewFlashcard()"><i class="fa-solid fa-bolt"></i> Use Flashcards</button>
-        </div>
-        <div id="flashcardContainer"></div>
-        <div class="input-container">
-            <input type="text" id="questionInput" placeholder="Enter question">
-            <input type="text" id="answerInput" placeholder="Enter answer">
-            <button id="addFlashcardButton" onclick="addFlashcard()"><i class="fa-solid fa-circle-plus"></i> Add Flashcard</button>
-            <button id="toggleButton" onclick="toggleHiddenAnswers()"><i class="fa-solid fa-eye"></i> Show Answers</button>
-            <button id="deleteAllButton" onclick="deleteAllFlashcards()"><i class="fa-solid fa-trash-alt"></i> Delete All</button>
-        </div>
-    </div>
-    <div class="flashcard-presentation" style="display: none;">
-        <button class="top-left-button" onclick="toggleFlashcardEditor()"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
-        <div class="presented-flashcard">
-            <div>
-                <p id="question"></p>
-            </div>
-            <div>
-                <b id="answer"></b>
-            </div>
-            <button onclick="revealAnswer()" class="reveal-button"><i class="fa-solid fa-eye"></i> Reveal Answer</button>
-            <button onclick="presentNewFlashcard()" class="next-button"><i class="fa-solid fa-circle-arrow-right"></i> Next</button>
-        </div>        
-    </div>
+    <a href="wynn/index.html">Wynncraft Cheat Sheet</a>
+    <br>
+    <a href="flashcards/index.html">Online Flashcards App</a>
 </body>
 </html>

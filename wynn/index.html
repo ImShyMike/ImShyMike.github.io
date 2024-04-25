@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Wynntils Functions Cheat Sheet</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <b>player()</b>
+            <p><strong>&nbsp;Description:</strong> function.wynntils.player.description</p>
+            <p><strong>&nbsp;Aliases:</strong> player</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>username()</b>
+            <p><strong>&nbsp;Description:</strong> function.wynntils.username.description</p>
+            <p><strong>&nbsp;Aliases:</strong> username</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>play(</b><span class="argument" title="function.wynntils.play.argument.sound"><strong>sound</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> function.wynntils.play.description</p>
+            <p><strong>&nbsp;Aliases:</strong> play</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>at_cap(</b><span class="argument" title="Capped value"><strong>capped</strong>:
+                CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Is the capped value at maximum?</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>cap(</b><span class="argument" title="Capped value"><strong>capped</strong>: CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The maximum value from this capped value</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped(</b><span class="argument" title="Current value"><strong>current</strong>: Number</span><b>,</b>
+            <span class="argument" title="Cap (max value)"><strong>cap</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> A capped value from current value and cap</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>current(</b><span class="argument" title="Capped value"><strong>capped</strong>:
+                CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The current value from this capped value</p>
+            <p><strong>&nbsp;Aliases:</strong> curr</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>percentage(</b><span class="argument" title="Capped value"><strong>capped</strong>:
+                CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The percentage (0-100) of this capped value</p>
+            <p><strong>&nbsp;Aliases:</strong> pct</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>remaining(</b><span class="argument" title="Capped value"><strong>capped</strong>:
+                CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The difference between cap and current value</p>
+            <p><strong>&nbsp;Aliases:</strong> rem</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>if_capped_value(</b><span class="argument" title="Condition"><strong>condition</strong>:
+                Boolean</span><b>,</b> <span class="argument" title="True value"><strong>ifTrue</strong>:
+                CappedValue</span><b>,</b> <span class="argument" title="False value"><strong>ifFalse</strong>:
+                CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> If the condition is true, the first value is returned, otherwise the
+                second value is returned</p>
+            <p><strong>&nbsp;Aliases:</strong> if_capped, if_cap</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>if_number(</b><span class="argument" title="Condition"><strong>condition</strong>: Boolean</span><b>,</b>
+            <span class="argument" title="True value"><strong>ifTrue</strong>: Number</span><b>,</b> <span
+                class="argument" title="False value"><strong>ifFalse</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> If the condition is true, the first value is returned, otherwise the
+                second value is returned</p>
+            <p><strong>&nbsp;Aliases:</strong> if_num</p>
+            <p><strong>&nbsp;Return Type:</strong> Number</p>
+        </div>
+        <hr>
+        <div>
+            <b>if_string(</b><span class="argument" title="Condition"><strong>condition</strong>: Boolean</span><b>,</b>
+            <span class="argument" title="True value"><strong>ifTrue</strong>: String</span><b>,</b> <span
+                class="argument" title="False value"><strong>ifFalse</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> If the condition is true, the first value is returned, otherwise the
+                second value is returned</p>
+            <p><strong>&nbsp;Aliases:</strong> if_str</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>distance(</b><span class="argument" title="First location"><strong>first</strong>:
+                Location</span><b>,</b> <span class="argument" title="Second location"><strong>second</strong>:
+                Location</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Distance between two locations (in meters)</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>location(</b><span class="argument" title="X coordinate"><strong>x</strong>: Number</span><b>,</b> <span
+                class="argument" title="Y coordinate"><strong>y</strong>: Number</span><b>,</b> <span class="argument"
+                title="Z coordinate"><strong>z</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Creates a location from three coordinates</p>
+            <p><strong>&nbsp;Aliases:</strong> loc</p>
+            <p><strong>&nbsp;Return Type:</strong> Location</p>
+        </div>
+        <hr>
+        <div>
+            <b>x(</b><span class="argument"
+                title="The location to extract the coordinate from"><strong>location</strong>: Location</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Extracts the X coordinate from a location</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>y(</b><span class="argument"
+                title="The location to extract the coordinate from"><strong>location</strong>: Location</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Extracts the Y coordinate from a location</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>z(</b><span class="argument"
+                title="The location to extract the coordinate from"><strong>location</strong>: Location</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Extracts the Z coordinate from a location</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>and(</b><span class="argument"
+                title="Booleans to &quot;and&quot; together, separated by semicolons"><strong>values</strong>:
+                Boolean</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if all conditions are true</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>equals(</b><span class="argument" title="First boolean"><strong>first</strong>: Number</span><b>,</b>
+            <span class="argument" title="Second boolean"><strong>second</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if two numbers are equal</p>
+            <p><strong>&nbsp;Aliases:</strong> eq</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>less_than(</b><span class="argument" title="First number"><strong>first</strong>: Number</span><b>,</b>
+            <span class="argument" title="Second number"><strong>second</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the first value is less than the second</p>
+            <p><strong>&nbsp;Aliases:</strong> lt</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>less_than_or_equals(</b><span class="argument" title="First number"><strong>first</strong>:
+                Number</span><b>,</b> <span class="argument" title="Second number"><strong>second</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the first value is less than or equal to the second</p>
+            <p><strong>&nbsp;Aliases:</strong> lte, less_than_equals, leq</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>greater_than(</b><span class="argument" title="First number"><strong>first</strong>:
+                Number</span><b>,</b> <span class="argument" title="Second number"><strong>second</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the first value is greater than the second</p>
+            <p><strong>&nbsp;Aliases:</strong> mt, more_than, gt</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>greater_than_or_equals(</b><span class="argument" title="First number"><strong>first</strong>:
+                Number</span><b>,</b> <span class="argument" title="Second number"><strong>second</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the first value is greater than or equal to the second</p>
+            <p><strong>&nbsp;Aliases:</strong> mte, more_than_equals, greater_than_equals, gte, geq</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>not_equals(</b><span class="argument" title="First boolean"><strong>first</strong>: Number</span><b>,</b>
+            <span class="argument" title="Second boolean"><strong>second</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if two values are not equal</p>
+            <p><strong>&nbsp;Aliases:</strong> neq</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>not(</b><span class="argument" title="Boolean"><strong>value</strong>: Boolean</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Negates a boolean</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>or(</b><span class="argument"
+                title="Booleans to &quot;or&quot; together, separated by semicolons"><strong>values</strong>:
+                Boolean</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if any condition is true</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>add(</b><span class="argument"
+                title="Numbers to add together, separated by semicolons"><strong>values</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Adds any amount of numbers together</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>divide(</b><span class="argument" title="Dividend"><strong>dividend</strong>: Number</span><b>,</b> <span
+                class="argument" title="Divisor"><strong>divisor</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Divides two numbers</p>
+            <p><strong>&nbsp;Aliases:</strong> div</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>integer(</b><span class="argument" title="Value"><strong>value</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Converts any number type to an integer</p>
+            <p><strong>&nbsp;Aliases:</strong> int</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>max(</b><span class="argument"
+                title="Numbers to find the maximum of, separated by semicolons"><strong>values</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The largest of all numbers provided</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>min(</b><span class="argument"
+                title="Numbers to find the minimum of, separated by semicolons"><strong>values</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The smallest of all numbers provided</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>modulo(</b><span class="argument" title="Dividend"><strong>dividend</strong>: Number</span><b>,</b> <span
+                class="argument" title="Divisor"><strong>divisor</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Returns the modulo (remainder of division) of two numbers</p>
+            <p><strong>&nbsp;Aliases:</strong> mod</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>multiply(</b><span class="argument"
+                title="Numbers to multiply together, separated by semicolons"><strong>values</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Multiplies any amount of numbers</p>
+            <p><strong>&nbsp;Aliases:</strong> mul</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>power(</b><span class="argument" title="Base"><strong>base</strong>: Number</span><b>,</b> <span
+                class="argument" title="Exponent"><strong>exponent</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Returns the first number raised to the power of the second number</p>
+            <p><strong>&nbsp;Aliases:</strong> pow</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>random(</b><span class="argument" title="Minimum value (inclusive)"><strong>min</strong>:
+                Number</span><b>,</b> <span class="argument" title="Maximum value (exclusive)"><strong>max</strong>:
+                Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Random number between minimum and maximum (excludes max)</p>
+            <p><strong>&nbsp;Aliases:</strong> rand</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>round(</b><span class="argument" title="Value"><strong>value</strong>: Number</span><b>,</b> <span
+                class="argument" title="Decimals"><strong>decimals</strong>: Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Rounds a number to the specified number of decimals</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>square_root(</b><span class="argument" title="Value"><strong>value</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Returns the square root of a number</p>
+            <p><strong>&nbsp;Aliases:</strong> sqrt</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>subtract(</b><span class="argument" title="First number"><strong>first</strong>: Number</span><b>,</b>
+            <span class="argument" title="Second number"><strong>second</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Subtracts the second number from the first number</p>
+            <p><strong>&nbsp;Aliases:</strong> sub</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>name(</b><span class="argument" title="Named value"><strong>named</strong>: NamedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The name of this named value</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>named_value(</b><span class="argument" title="Name"><strong>name</strong>: String</span><b>,</b> <span
+                class="argument" title="Value"><strong>value</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> A named value from a name and a value</p>
+            <p><strong>&nbsp;Aliases:</strong> named</p>
+            <p><strong>&nbsp;Return Type:</strong> NamedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>value(</b><span class="argument" title="Named value"><strong>named</strong>: NamedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The value of this named value</p>
+            <p><strong>&nbsp;Aliases:</strong> val</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_string(</b><span class="argument" title="Capped Value"><strong>value</strong>:
+                CappedValue</span><b>,</b> <span class="argument"
+                title="Delimiter between current and max value"><strong>delimiter</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Returns formatted Capped Value with delimiter in between</p>
+            <p><strong>&nbsp;Aliases:</strong> cap_str, str_cap</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>concat(</b><span class="argument"
+                title="Strings to concatenate, separated by semicolons"><strong>values</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Concatenates any amount of strings together</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>format_capped(</b><span class="argument" title="Capped value to format"><strong>value</strong>:
+                CappedValue</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Formats a capped value to a shorter version.</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>format(</b><span class="argument" title="Value to format"><strong>value</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Formats a number to a shorter version.</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>leading_zeros(</b><span class="argument"
+                title="The number to add leading zeros to"><strong>value</strong>: Integer</span><b>,</b> <span
+                class="argument" title="The length of the number after adding leading zeros"><strong>length</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Adds leading zeros to a number</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>parse_double(</b><span class="argument" title="String to parse"><strong>value</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Parses a string to a double</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>parse_integer(</b><span class="argument" title="String to parse"><strong>value</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Parses a string to an integer</p>
+            <p><strong>&nbsp;Aliases:</strong> parse_int</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>regex_find(</b><span class="argument" title="String to check"><strong>source</strong>:
+                String</span><b>,</b> <span class="argument" title="Regex pattern"><strong>regex</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the given regex finds the given string</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>regex_match(</b><span class="argument" title="String to check"><strong>source</strong>:
+                String</span><b>,</b> <span class="argument" title="Regex pattern"><strong>regex</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the given regex matches the given string</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>regex_replace(</b><span class="argument" title="String to replace"><strong>source</strong>:
+                String</span><b>,</b> <span class="argument" title="Regex pattern"><strong>regex</strong>:
+                String</span><b>,</b> <span class="argument" title="Replacement string"><strong>replacement</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Replaces all matches of the given regex with the given replacement
+            </p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>repeat(</b><span class="argument" title="The string to repeat"><strong>value</strong>:
+                String</span><b>,</b> <span class="argument"
+                title="The number of times to repeat the string"><strong>count</strong>: Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Repeats the given string the specified amount of times</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>string_contains(</b><span class="argument" title="String to search in"><strong>source</strong>:
+                String</span><b>,</b> <span class="argument" title="String to check for"><strong>substring</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if a string contains another string</p>
+            <p><strong>&nbsp;Aliases:</strong> contains_str</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>string_equals(</b><span class="argument" title="First string"><strong>first</strong>:
+                String</span><b>,</b> <span class="argument" title="Second string"><strong>second</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if two strings are equal</p>
+            <p><strong>&nbsp;Aliases:</strong> eq_str</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>string(</b><span class="argument" title="Value to convert"><strong>value</strong>: Number</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Convert a number to a string</p>
+            <p><strong>&nbsp;Aliases:</strong> str</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>current_territory()</b>
+            <p><strong>&nbsp;Description:</strong> The territory you are currently in</p>
+            <p><strong>&nbsp;Aliases:</strong> territory</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>current_territory_owner(</b><span class="argument"
+                title="Should only the guild prefix be shown?"><strong>prefixOnly</strong>: Boolean =
+                false</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The name or prefix of the guild that owns the territory you are
+                currently in</p>
+            <p><strong>&nbsp;Aliases:</strong> territory_owner</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>current_world()</b>
+            <p><strong>&nbsp;Description:</strong> Get the name of the current world, such as &quot;WC32&quot;, may be
+                &lt;unknown&gt; or &lt;not on world&gt;</p>
+            <p><strong>&nbsp;Aliases:</strong> world</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>current_world_uptime()</b>
+            <p><strong>&nbsp;Description:</strong> Time since the current world was last restarted such as
+                &quot;03:21&quot;, may be &lt;unknown&gt; or &lt;not on world&gt;</p>
+            <p><strong>&nbsp;Aliases:</strong> world_uptime, uptime</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>in_mapped_area(</b><span class="argument" title="Width of the area to check"><strong>width</strong>:
+                Number = 130</span><b>,</b> <span class="argument"
+                title="Height of the area to check"><strong>height</strong>: Number = 130</span><b>,</b> <span
+                class="argument" title="Zoom level of the area to check"><strong>scale</strong>: Number =
+                1</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Are you currently inside a mapped area?</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>mob_totem_count()</b>
+            <p><strong>&nbsp;Description:</strong> The number of mob totems around you</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>mob_totem_distance(</b><span class="argument"
+                title="The number of the mob totem to get the distance to"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The distance to the mob totem</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>mob_totem(</b><span class="argument"
+                title="The number of the mob totem to get the location of"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The location of the mob totem</p>
+            <p><strong>&nbsp;Return Type:</strong> Location</p>
+        </div>
+        <hr>
+        <div>
+            <b>mob_totem_owner(</b><span class="argument"
+                title="The number of the mob totem to get the owner of"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The name of the player who placed the mob totem</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>mob_totem_time_left(</b><span class="argument"
+                title="The number of the mob totem to get the time left of"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The time left on the mob totem</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>ping()</b>
+            <p><strong>&nbsp;Description:</strong> Your ping to the Wynncraft server</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>token_gatekeeper_count()</b>
+            <p><strong>&nbsp;Description:</strong> The number of tokens gatekeepers present</p>
+            <p><strong>&nbsp;Aliases:</strong> token_count</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>token_gatekeeper_deposited(</b><span class="argument"
+                title="The Gatekeeper Number"><strong>gatekeeperNumber</strong>: Integer = 0</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The number of tokens deposited to a gatekeeper</p>
+            <p><strong>&nbsp;Aliases:</strong> token_dep</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>token_gatekeeper(</b><span class="argument"
+                title="The Gatekeeper Number"><strong>gatekeeperNumber</strong>: Integer = 0</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The number of tokens collected to get past a gatekeeper</p>
+            <p><strong>&nbsp;Aliases:</strong> token</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>token_gatekeeper_type(</b><span class="argument"
+                title="The Gatekeeper Number"><strong>gatekeeperNumber</strong>: Integer = 0</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The type of tokens needed to get past a gatekeeper</p>
+            <p><strong>&nbsp;Aliases:</strong> token_type</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>world_state()</b>
+            <p><strong>&nbsp;Description:</strong> The current world state. One of NOT_CONNECTED, CONNECTING, INTERIM,
+                HUB, CHARACTER_SELECTION, WORLD</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>bps()</b>
+            <p><strong>&nbsp;Description:</strong> Player speed in blocks per second</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>bps_xz()</b>
+            <p><strong>&nbsp;Description:</strong> Player speed in blocks per second excluding vertical movement</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_health()</b>
+            <p><strong>&nbsp;Description:</strong> Your health</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_mana()</b>
+            <p><strong>&nbsp;Description:</strong> Your mana</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_soul_points()</b>
+            <p><strong>&nbsp;Description:</strong> Your soul points</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>class(</b><span class="argument"
+                title="Should the class name be in uppercase?"><strong>uppercase</strong>: Boolean =
+                false</span><b>,</b> <span class="argument"
+                title="Should the reskinned name be shown instead of the original one?"><strong>showReskinnedName</strong>:
+                Boolean = true</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Name of your current class</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>health()</b>
+            <p><strong>&nbsp;Description:</strong> Your current health</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>health_max()</b>
+            <p><strong>&nbsp;Description:</strong> Maximum possible health</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>health_pct()</b>
+            <p><strong>&nbsp;Description:</strong> Your current health as percentage of max</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>id()</b>
+            <p><strong>&nbsp;Description:</strong> Your character&#x27;s ID</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>mana()</b>
+            <p><strong>&nbsp;Description:</strong> Your current mana</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>mana_max()</b>
+            <p><strong>&nbsp;Description:</strong> Maximum possible mana</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>mana_pct()</b>
+            <p><strong>&nbsp;Description:</strong> Your current mana as percentage of max</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>soulpoint()</b>
+            <p><strong>&nbsp;Description:</strong> Your current soul points</p>
+            <p><strong>&nbsp;Aliases:</strong> sp</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>soulpoint_max()</b>
+            <p><strong>&nbsp;Description:</strong> Maximum possible soul points</p>
+            <p><strong>&nbsp;Aliases:</strong> sp_max</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>soulpoint_timer()</b>
+            <p><strong>&nbsp;Description:</strong> Time until next soul point (formatted)</p>
+            <p><strong>&nbsp;Aliases:</strong> sp_timer</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>soulpoint_timer_m()</b>
+            <p><strong>&nbsp;Description:</strong> Time until next soul point (minutes)</p>
+            <p><strong>&nbsp;Aliases:</strong> sp_timer_m</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>soulpoint_timer_s()</b>
+            <p><strong>&nbsp;Description:</strong> Time until next soul point (seconds)</p>
+            <p><strong>&nbsp;Aliases:</strong> sp_timer_s</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>sprint()</b>
+            <p><strong>&nbsp;Description:</strong> Your remaining sprint stamina</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>status_effect_active(</b><span class="argument"
+                title="Case-sensitive effect name string to check for"><strong>query</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Checks if an effect is contained in the status effect list</p>
+            <p><strong>&nbsp;Aliases:</strong> contains_effect</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>status_effects()</b>
+            <p><strong>&nbsp;Description:</strong> Retrieves the full list of status effects</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>area_damage_average(</b><span class="argument"
+                title="The amount of seconds to average the damage over"><strong>seconds</strong>: Integer =
+                10</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The average damage you dealt in your area in the last specified
+                seconds</p>
+            <p><strong>&nbsp;Aliases:</strong> adavg</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>area_damage_per_second()</b>
+            <p><strong>&nbsp;Description:</strong> The damage you dealt in your area in the last second</p>
+            <p><strong>&nbsp;Aliases:</strong> adps</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>blocks_above_ground()</b>
+            <p><strong>&nbsp;Description:</strong> How many blocks you are above the ground (the number of air blocks
+                below you)</p>
+            <p><strong>&nbsp;Aliases:</strong> agl, above_ground_level</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_level()</b>
+            <p><strong>&nbsp;Description:</strong> Your combat level</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_xp()</b>
+            <p><strong>&nbsp;Description:</strong> Your combat XP</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>level()</b>
+            <p><strong>&nbsp;Description:</strong> Your current combat level</p>
+            <p><strong>&nbsp;Aliases:</strong> lvl</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp()</b>
+            <p><strong>&nbsp;Description:</strong> Your current XP in this level expressed as points (formatted)</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_pct()</b>
+            <p><strong>&nbsp;Description:</strong> Your current XP in this level expressed percentage of level up
+                requirement</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_per_minute()</b>
+            <p><strong>&nbsp;Description:</strong> The amount of experience you gain per minute, formatted.</p>
+            <p><strong>&nbsp;Aliases:</strong> xpm</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_per_minute_raw()</b>
+            <p><strong>&nbsp;Description:</strong> The amount of experience you gain per minute, raw amount.</p>
+            <p><strong>&nbsp;Aliases:</strong> xpm_raw</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_percentage_per_minute()</b>
+            <p><strong>&nbsp;Description:</strong> The amount of experience you gain per minute, percentage.</p>
+            <p><strong>&nbsp;Aliases:</strong> xppm</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_raw()</b>
+            <p><strong>&nbsp;Description:</strong> Your current XP in this level expressed as points (raw number)</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_req()</b>
+            <p><strong>&nbsp;Description:</strong> XP points needed to level up (formatted)</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>xp_req_raw()</b>
+            <p><strong>&nbsp;Description:</strong> XP points needed to level up (raw number)</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_mem()</b>
+            <p><strong>&nbsp;Description:</strong> Memory usage of the JVM</p>
+            <p><strong>&nbsp;Aliases:</strong> capped_memory</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>clock()</b>
+            <p><strong>&nbsp;Description:</strong> The current time, formatted in the current locale style</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>clockm()</b>
+            <p><strong>&nbsp;Description:</strong> The current time, formatted to 24h format</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>stopwatch_zero()</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the stopwatch is currently at zero</p>
+            <p><strong>&nbsp;Aliases:</strong> stopwatch_is_zero</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>stopwatch_running()</b>
+            <p><strong>&nbsp;Description:</strong> Checks if the stopwatch is currently running</p>
+            <p><strong>&nbsp;Return Type:</strong> Boolean</p>
+        </div>
+        <hr>
+        <div>
+            <b>stopwatch_hours()</b>
+            <p><strong>&nbsp;Description:</strong> The number in the hours position on the stopwatch</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>stopwatch_minutes()</b>
+            <p><strong>&nbsp;Description:</strong> The number in the minutes position on the stopwatch</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>stopwatch_seconds()</b>
+            <p><strong>&nbsp;Description:</strong> The number in the seconds position on the stopwatch</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>stopwatch_milliseconds()</b>
+            <p><strong>&nbsp;Description:</strong> The number in the milliseconds position on the stopwatch</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>mem_max()</b>
+            <p><strong>&nbsp;Description:</strong> Maximum amount of memory available to the JVM</p>
+            <p><strong>&nbsp;Aliases:</strong> memorymax, memmax</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>mem_pct()</b>
+            <p><strong>&nbsp;Description:</strong> Percentage of available memory that is currently being used</p>
+            <p><strong>&nbsp;Aliases:</strong> memorypct, mempct</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>mem_used()</b>
+            <p><strong>&nbsp;Description:</strong> Current amount of memory used by the JVM</p>
+            <p><strong>&nbsp;Aliases:</strong> memoryused, memused</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>accessory_durability(</b><span class="argument"
+                title="The accessory you want the durability of. One of Ring_1, Ring_2, Bracelet, Necklace"><strong>accessory</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Durability of the specified accessory</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>all_shiny_stats()</b>
+            <p><strong>&nbsp;Description:</strong> Shows a list of all shiny stats</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>armor_durability(</b><span class="argument"
+                title="The armor you want the durability of"><strong>armor</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Durability of the specified armor</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_held_item_durability()</b>
+            <p><strong>&nbsp;Description:</strong> Durability of the item held in your main hand</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_ingredient_pouch_slots()</b>
+            <p><strong>&nbsp;Description:</strong> Used slots in the ingredient pouch</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_inventory_slots()</b>
+            <p><strong>&nbsp;Description:</strong> Used slots in your inventory</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>emerald_block()</b>
+            <p><strong>&nbsp;Description:</strong> Get the number of emerald blocks in your inventory</p>
+            <p><strong>&nbsp;Aliases:</strong> eb</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>emerald_string(</b><span class="argument"
+                title="Whether zero values should be displayed"><strong>zeros</strong>: Boolean = false</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Get the value of all currency in your inventory, nicely formatted as
+                LE/EB/E</p>
+            <p><strong>&nbsp;Aliases:</strong> estr</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>emeralds()</b>
+            <p><strong>&nbsp;Description:</strong> Amount of money in emeralds in inventory (Besides LE and EB)</p>
+            <p><strong>&nbsp;Aliases:</strong> em</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>held_item_current_durability()</b>
+            <p><strong>&nbsp;Description:</strong> Current durability of the item in your hand</p>
+            <p><strong>&nbsp;Aliases:</strong> current_held_durability</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>held_item_max_durability()</b>
+            <p><strong>&nbsp;Description:</strong> Max durability of the item in your hand</p>
+            <p><strong>&nbsp;Aliases:</strong> max_held_durability</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>held_item_name(</b><span class="argument"
+                title="Whether to retain the color codes in the name"><strong>formatted</strong>: Boolean =
+                false</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Name of the item in your hand</p>
+            <p><strong>&nbsp;Aliases:</strong> held_item, held_name</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>held_item_shiny_stat()</b>
+            <p><strong>&nbsp;Description:</strong> Shows the shiny stat of the item held in your main hand</p>
+            <p><strong>&nbsp;Return Type:</strong> NamedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>held_item_type()</b>
+            <p><strong>&nbsp;Description:</strong> Type of the item in your hand</p>
+            <p><strong>&nbsp;Aliases:</strong> held_type</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>ingredient_pouch_open_slots()</b>
+            <p><strong>&nbsp;Description:</strong> How many slots are currently open in your ingredient pouch.</p>
+            <p><strong>&nbsp;Aliases:</strong> pouch_open, pouch_free</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>ingredient_pouch_used_slots()</b>
+            <p><strong>&nbsp;Description:</strong> How many slots are currently used in your ingredient pouch.</p>
+            <p><strong>&nbsp;Aliases:</strong> pouch_used</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>inventory_free()</b>
+            <p><strong>&nbsp;Description:</strong> Number of free slots in inventory</p>
+            <p><strong>&nbsp;Aliases:</strong> inv_free</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>inventory_used()</b>
+            <p><strong>&nbsp;Description:</strong> Number of used slots in inventory</p>
+            <p><strong>&nbsp;Aliases:</strong> inv_used</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>liquid_emerald()</b>
+            <p><strong>&nbsp;Description:</strong> Amount of money liquid emeralds in inventory</p>
+            <p><strong>&nbsp;Aliases:</strong> le</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>money()</b>
+            <p><strong>&nbsp;Description:</strong> Total amount of money in inventory</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_horse_level()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s level</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>capped_horse_xp()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s XP</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>horse_level()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s current level</p>
+            <p><strong>&nbsp;Aliases:</strong> h_lvl</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>horse_level_max()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s maximum level</p>
+            <p><strong>&nbsp;Aliases:</strong> h_mlvl</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>horse_name()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s name</p>
+            <p><strong>&nbsp;Aliases:</strong> h_name</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>horse_tier()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s tier</p>
+            <p><strong>&nbsp;Aliases:</strong> h_tier</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>horse_xp()</b>
+            <p><strong>&nbsp;Description:</strong> Your horse&#x27;s current XP</p>
+            <p><strong>&nbsp;Aliases:</strong> h_xp</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>chest_opened()</b>
+            <p><strong>&nbsp;Description:</strong> Get the number of loot chests opened</p>
+            <p><strong>&nbsp;Aliases:</strong> chest_count</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>dry_boxes()</b>
+            <p><strong>&nbsp;Description:</strong> Get the number of found gear boxes that has not been a mythic</p>
+            <p><strong>&nbsp;Aliases:</strong> dry_b, dry_boxes_count</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>dry_streak()</b>
+            <p><strong>&nbsp;Description:</strong> Get the number of loot chests opened that has not contained a mythic
+            </p>
+            <p><strong>&nbsp;Aliases:</strong> dry_s</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>highest_dry_streak()</b>
+            <p><strong>&nbsp;Description:</strong> The highest dry streak that you had.</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_dry_streak()</b>
+            <p><strong>&nbsp;Description:</strong> The last dry streak that you had.</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_mythic()</b>
+            <p><strong>&nbsp;Description:</strong> The last mythic that you found in a loot chest.</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_beacon_count(</b><span class="argument" title="The color of the beacon"><strong>color</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The number of beacons you have selected in your lootrun</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_challenges()</b>
+            <p><strong>&nbsp;Description:</strong> The number of challenges</p>
+            <p><strong>&nbsp;Return Type:</strong> CappedValue</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_last_selected_beacon_color()</b>
+            <p><strong>&nbsp;Description:</strong> The color of the beacon you have last selected in your lootrun</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_red_beacon_challenge_count()</b>
+            <p><strong>&nbsp;Description:</strong> The number of red beacon challenges you have remaining in your
+                lootrun</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_state()</b>
+            <p><strong>&nbsp;Description:</strong> The current state of the lootrun you are in. One of NOT_RUNNING,
+                CHOOSING_BEACON, IN_TASK</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_task_name(</b><span class="argument" title="The color of the beacon"><strong>color</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The name of the task the beacon is pointing to</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_task_type(</b><span class="argument" title="The color of the beacon"><strong>color</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The type of the task the beacon is pointing to. One of LOOT, SLAY,
+                DESTROY, DEFEND, UNKNOWN</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>lootrun_time()</b>
+            <p><strong>&nbsp;Description:</strong> The time left of current lootrun in seconds</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>dir()</b>
+            <p><strong>&nbsp;Description:</strong> Your current direction (heading)</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>fps()</b>
+            <p><strong>&nbsp;Description:</strong> The current FPS (frames per second)</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>my_location()</b>
+            <p><strong>&nbsp;Description:</strong> Your current location</p>
+            <p><strong>&nbsp;Aliases:</strong> my_loc</p>
+            <p><strong>&nbsp;Return Type:</strong> Location</p>
+        </div>
+        <hr>
+        <div>
+            <b>ticks()</b>
+            <p><strong>&nbsp;Description:</strong> The number of ticks since world start</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_harvest_material_level()</b>
+            <p><strong>&nbsp;Description:</strong> The level of the material you last harvested</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_harvest_material_name()</b>
+            <p><strong>&nbsp;Description:</strong> The name of the material you last harvested</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_harvest_material_tier()</b>
+            <p><strong>&nbsp;Description:</strong> The tier of the material you last harvested</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_harvest_material_type()</b>
+            <p><strong>&nbsp;Description:</strong> The type of material you last harvested</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>last_harvest_resource_type()</b>
+            <p><strong>&nbsp;Description:</strong> The type of resource you last harvested</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>material_dry_streak()</b>
+            <p><strong>&nbsp;Description:</strong> Returns the number of times a material was not a T3 in a row.</p>
+            <p><strong>&nbsp;Aliases:</strong> mat_dry</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>profession_level(</b><span class="argument" title="The profession to check"><strong>profession</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The level of the specified profession</p>
+            <p><strong>&nbsp;Aliases:</strong> prof_lvl</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>profession_percentage(</b><span class="argument"
+                title="The profession to check"><strong>profession</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Your current percentage for the profession specified</p>
+            <p><strong>&nbsp;Aliases:</strong> prof_pct</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>profession_xp_per_minute(</b><span class="argument"
+                title="The profession to check"><strong>profession</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The amount of XP you gained for the specified profession in the last
+                minute</p>
+            <p><strong>&nbsp;Aliases:</strong> prof_xpm</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>profession_xp_per_minute_raw(</b><span class="argument"
+                title="The profession to check"><strong>profession</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The raw amount of XP you gained for the specified profession in the
+                last minute</p>
+            <p><strong>&nbsp;Aliases:</strong> prof_xpm_raw</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>arrow_shield_count()</b>
+            <p><strong>&nbsp;Description:</strong> The number of arrow shield charges you have</p>
+            <p><strong>&nbsp;Aliases:</strong> arrow_shield</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>shaman_mask(</b><span class="argument"
+                title="Should the name be colored according to the mask&#x27;s color?"><strong>isColored</strong>:
+                Boolean = true</span><b>,</b> <span class="argument"
+                title="Should the short name be used instead of the full name?"><strong>useShortName</strong>: Boolean =
+                false</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> What shaman mask you are currently wearing</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>shaman_totem_distance(</b><span class="argument"
+                title="The number of the totem to get the distance from"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The distance between you and the shaman totem</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>shaman_totem_location(</b><span class="argument"
+                title="The number of the totem to get the distance from"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The location of the shaman totem</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>shaman_totem_state(</b><span class="argument"
+                title="The number of the totem to get the distance from"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The state of the shaman totem. One of SUMMONED, ACTIVE</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>shaman_totem_time_left(</b><span class="argument"
+                title="The number of the totem to get the distance from"><strong>totemNumber</strong>:
+                Integer</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> The time left on the shaman totem</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>friends()</b>
+            <p><strong>&nbsp;Description:</strong> Number of friends online</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>party_members(</b><span class="argument"
+                title="Whether to include offline party members in the count"><strong>includeOffline</strong>: Boolean =
+                true</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Number of party members</p>
+            <p><strong>&nbsp;Return Type:</strong> Integer</p>
+        </div>
+        <hr>
+        <div>
+            <b>party_leader()</b>
+            <p><strong>&nbsp;Description:</strong> The name of the party leader</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>aura_timer()</b>
+            <p><strong>&nbsp;Description:</strong> The time left before aura strikes</p>
+            <p><strong>&nbsp;Return Type:</strong> Double</p>
+        </div>
+        <hr>
+        <div>
+            <b>transcribe_gavellian(</b><span class="argument"
+                title="The text you want to transcribe into Gavellian."><strong>gavellian</strong>:
+                String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Transcribe your given input into Gavellian.</p>
+            <p><strong>&nbsp;Aliases:</strong> gavellian</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+        <hr>
+        <div>
+            <b>transcribe_wynnic(</b><span class="argument"
+                title="The text you want to transcribe into Wynnic."><strong>wynnic</strong>: String</span><b>)</b>
+            <p><strong>&nbsp;Description:</strong> Transcribe your given input into Wynnic.</p>
+            <p><strong>&nbsp;Aliases:</strong> wynnic</p>
+            <p><strong>&nbsp;Return Type:</strong> String</p>
+        </div>
+    </div>
+</body>
+</html>
