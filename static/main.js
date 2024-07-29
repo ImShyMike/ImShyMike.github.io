@@ -41,4 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type();
         }
     });
+
+    setTimeout(enableCursor, 500)
+    setTimeout(type, 500)
 });
