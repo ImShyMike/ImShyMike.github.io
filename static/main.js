@@ -28,9 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(type, 150);
             } else {
                 typewriter.style.borderRight = '4px solid rgba(0, 0, 0, 0)';
-                typing = false;
                 index = text.length;
                 deleting = true;
+                setTimeout(function () {
+                    typing = false; 
+                }, 750);
             }
         }
     }
