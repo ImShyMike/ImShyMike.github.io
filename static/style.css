@@ -33,9 +33,6 @@ body {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     justify-content: center;
-    max-width: 90%;
-    position: absolute;
-    top: 25%;
 }
 
 .typewriter {
