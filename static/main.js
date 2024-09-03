@@ -48,11 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 500)
 
     let discordPresence = document.getElementById("discord-status")
-    let counter = 0
     function updateDiscordStatus() {
-        counter++
-        discordPresence.src = "https://lanyard.cnrad.dev/api/582648583635992622?idleMessage=Not%20doing%20anything%20:p&bg=1f1f1f&update=" + counter.toString()
+        if (document.hasFocus()) {
+            discordPresence.src = "https://lanyard.cnrad.dev/api/582648583635992622?idleMessage=Not%20doing%20anything%20:p&bg=1f1f1f"
+        }
         setTimeout(updateDiscordStatus, 15000)
+    }
+
+    window.onfocus = function(){  
+        discordPresence.src = "https://lanyard.cnrad.dev/api/582648583635992622?idleMessage=Not%20doing%20anything%20:p&bg=1f1f1f"
     }
 
     setTimeout(updateDiscordStatus, 15000)
