@@ -20,6 +20,11 @@ body {
     background: var(--accent-color);
 }
 
+.discord-status {
+    width: 50%;
+    height: 50%;
+}
+
 .container {
     width: 90%;
     max-width: 900px;
