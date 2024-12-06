@@ -1,3 +1,6 @@
 [submodule "doubloon-finance"]
 	path = doubloon-finance
 	url = https://github.com/ImShyMike/Doubloon-Finance.git
+[submodule "palette-converter"]
+	path = palette-converter
+	url = https://github.com/ImShyMike/Palette-Converter
